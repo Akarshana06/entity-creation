@@ -5,6 +5,7 @@ import MovieCard from './MovieCard';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css'; // Optional: Import CSS for styling
 
+
 const Dashboard = () => {
   const navigate = useNavigate();
 
@@ -39,8 +40,10 @@ const Dashboard = () => {
       <div className="movie-list">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
+          
         ))}
       </div>
+      <link className='add-movie'><button>Add movie</button></link>
     </div>
   );
 };
